@@ -23,8 +23,6 @@ class CPU:
             0b01000101: self.PUSH,
             0b01000110: self.POP,
             0b00000001: self.HLT,
-            0b01010000: self.CALL,
-            0b00010001: self.RET
         }
         if func in branch_table:
             branch_table[func]()
@@ -80,16 +78,6 @@ class CPU:
                 command = line.split("#", 1)[0]
                 self.ram[address] = int(command, 2)
                 address += 1
-
-    def CALL(self):
-        self.reg[self.sp] -= 1
-        self.ram_write(self.reg[self.sp], self.pc + 1)
-        self.pc += 2
-        self.trace()
-
-    def RET(self):
-        self.pc = self.ram_read(self.reg[self.sp])
-        self.reg[self.sp] += 1
 
     def alu(self, op, reg_a, reg_b):
         """ALU operations."""

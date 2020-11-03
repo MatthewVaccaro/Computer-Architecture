@@ -25,12 +25,12 @@
 
 ### Day 3: Stack
 
-- [x] Implement the System Stack and be able to run the `stack.ls8` program
+- [] Implement the System Stack and be able to run the `stack.ls8` program
 
 ### Day 4: Get `call.ls8` running
 
-- [x] Implement the CALL and RET instructions
-- [x] Implement Subroutine Calls and be able to run the `call.ls8` program
+- [] Implement the CALL and RET instructions
+- [] Implement Subroutine Calls and be able to run the `call.ls8` program
 
 ### Stretch
 
